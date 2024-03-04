@@ -17,6 +17,12 @@ namespace Connect_agenda_models.Models
         public string State { get; set; }
         public string Country { get; set; }
         public bool IsActive { get; set; }
+        public Guid UserUpdateId { get; set; }
+        public UserModel UserUpdate { get; set; }
+        public DateTime UpdateDate { get; set; }
+        public Guid UserCreateId { get; set; }
+        public UserModel UserCreate { get; set; }
+        public DateTime CreateDate { get; set; }
 
     }
 }
