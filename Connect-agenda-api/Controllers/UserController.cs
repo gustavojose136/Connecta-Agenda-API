@@ -1,5 +1,6 @@
 ﻿using Connect_agenda_api.Encryption;
 using Connect_agenda_models.Models;
+using Connect_agenda_models.Models.FilterModels;
 using Connect_agenda_services.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,21 @@ namespace Connect_agenda_api.Controllers
         public UserController(UserService userService)
         {
             _userService = userService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllUsers([FromQuery]UserFilterModel filter, int pageNumber, int pageItems)
+        {
+            try
+            {
+                var users = await _userService.GetAllUsers(filter, pageNumber, pageItems);
+
+                return Ok(users);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
 
         [HttpPost]
