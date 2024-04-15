@@ -1,23 +1,118 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\Connect-agenda\\Connect-agenda-services\\Connect-agenda-services.csproj": {}
+    "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {}
   },
   "projects": {
-    "D:\\projects\\Connect-agenda\\Connect-agenda-services\\Connect-agenda-services.csproj": {
+    "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\Connect-agenda\\Connect-agenda-services\\Connect-agenda-services.csproj",
-        "projectName": "Connect-agenda-services",
-        "projectPath": "D:\\projects\\Connect-agenda\\Connect-agenda-services\\Connect-agenda-services.csproj",
-        "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\Connect-agenda\\Connect-agenda-services\\obj\\",
+        "projectUniqueName": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
+        "projectName": "Connect-agenda-data",
+        "projectPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
+        "packagesPath": "C:\\Users\\grosa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\grosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+                "projectPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "projectName": "Connect-agenda-models",
+        "projectPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "packagesPath": "C:\\Users\\grosa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\grosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +134,9 @@
           ]
         },
         "restoreAuditProperties": {
-          "enableAudit": "default"
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,7 +158,88 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj",
+        "projectName": "Connect-agenda-services",
+        "projectPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj",
+        "packagesPath": "C:\\Users\\grosa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\grosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
+                "projectPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj"
+              },
+              "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+                "projectPath": "C:\\Users\\grosa\\Documents\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
