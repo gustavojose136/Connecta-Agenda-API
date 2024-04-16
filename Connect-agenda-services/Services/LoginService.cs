@@ -27,6 +27,7 @@ namespace Connect_agenda_services.Services
 
                 var user = await _userRepository.Login(login.Email, login.Password);
 
+                //exeption
                 if (user == null) return BadRequest("Usuário ou senha inválidos");
 
                 return _tokenService.GenerateToken(user.Id, user.Name);
