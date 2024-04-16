@@ -30,7 +30,7 @@ namespace Connect_agenda_services.Services
                 //exeption
                 if (user == null) return BadRequest("Usuário ou senha inválidos");
 
-                return _tokenService.GenerateToken(user.Id, user.Name);
+                //return _tokenService.GenerateToken(user.Id, user.Name);
             }
             catch(Exception ex)
             {
