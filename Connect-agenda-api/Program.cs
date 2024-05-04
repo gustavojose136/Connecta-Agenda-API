@@ -73,11 +73,13 @@ builder.Services.AddDbContext<ConnectAgendaContext>(options =>
 
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IPlanCardRepository, PlanCardRepository>();
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<LoginService>();
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<PlanCardService>();
 
 
 var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection("SecurityKey").Value);
