@@ -33,16 +33,45 @@ namespace Connect_agenda_services.Services
         {
             try
             {
-                PlanCardModel NewPlancCard = new PlanCardModel();
+                if(string.IsNullOrEmpty(planCard.Name)) throw new Exception("O Nome do plano é obrigatório");
 
+                PlanCardModel NewPlancCard = new PlanCardModel();
+                
                 NewPlancCard = planCard;
 
                 NewPlancCard.Id = Guid.NewGuid().ToString();
                 NewPlancCard.IsActive = true;
                 NewPlancCard.UserCreateId = userId;
-                NewPlancCard.CreateDate = new DateTime();
+                NewPlancCard.CreateDate = DateTime.Now;
 
                 await _planCardRepostory.Post(NewPlancCard);
+
+                return (NewPlancCard);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<PlanCardModel> UpdatePlanCard(PlanCardModel planCard, string userId)
+        {
+            try
+            {
+                if(string.IsNullOrEmpty(planCard.Name)) throw new Exception("O Nome do plano é obrigatório");
+
+                var existPlanCard = await _planCardRepostory.GetById(planCard.Id);
+
+                if(existPlanCard == null) throw new Exception("Plano não encontrado");
+
+                PlanCardModel NewPlancCard = new PlanCardModel();
+                
+                NewPlancCard = planCard;
+
+                NewPlancCard.UserUpdateId = userId;
+                NewPlancCard.UpdateDate = DateTime.Now;
+
+                await _planCardRepostory.Update(NewPlancCard);
 
                 return (NewPlancCard);
             }

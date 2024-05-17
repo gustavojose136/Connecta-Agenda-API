@@ -49,22 +49,22 @@ namespace Connect_agenda_api.Controllers
             }
         }
 
-        //[HttpPut]
-        //public async Task<IActionResult> UpdatePlanCard(PlanCardModel planCard)
-        //{
-        //    try
-        //    {
-        //        var userId = User.FindFirstValue(ClaimTypes.Name);
+        [HttpPut]
+        public async Task<IActionResult> UpdatePlanCard(PlanCardModel planCard)
+        {
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.Name);
 
-        //        var planCardU = await _planCardService.UpdatePlanCard(planCard, userId);
+                var planCardU = await _planCardService.UpdatePlanCard(planCard, userId);
 
-        //        return Ok(planCard);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-        //}
+                return Ok(planCard);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
         //[HttpDelete]
         //public async Task<IActionResult> DeletePlanCard(int id)

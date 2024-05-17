@@ -1,9 +1,9 @@
 ﻿using Connect_agenda_data.data;
 using Connect_agenda_data.repository.interfaces;
 using Connect_agenda_models.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +23,10 @@ namespace Connect_agenda_data.repository
         {
             try
             {
-                return _dBContext.PlanCard.ToList();
+                return await _dBContext.PlanCard
+                            .Include(x => x.UserCreate)
+                            .Include(x => x.UserUpdate)
+                            .ToListAsync();
             }
             catch (Exception ex)
             {
@@ -35,7 +38,8 @@ namespace Connect_agenda_data.repository
         {
             try
             {
-                return await _dBContext.PlanCard.FirstOrDefaultAsync(x => x.Id == id);
+                return await _dBContext.PlanCard
+                            .FirstOrDefaultAsync(x => x.Id == id);
             }
             catch (Exception ex)
             {
