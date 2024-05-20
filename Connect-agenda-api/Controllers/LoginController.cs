@@ -23,7 +23,7 @@ namespace Connect_agenda_api.Controllers
         {
             try
             {
-                //login.Password = login.Password.Encrypt();
+                login.Password = login.Password.Encrypt();
 
                 var token = await _loginService.Login(login);
 

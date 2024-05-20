@@ -1,4 +1,5 @@
 ﻿using Connect_agenda_models.Models;
+using Connect_agenda_models.Models.FilterModels;
 using Connect_agenda_services.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,11 +19,11 @@ namespace Connect_agenda_api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllPlanCards()
+        public async Task<IActionResult> GetAllPlanCards([FromQuery]PlanCardFilterModel? filter)
         {
             try
             {
-                var planCards = await _planCardService.GetAllPlanCards();
+                var planCards = await _planCardService.GetAllPlanCards(filter);
 
                 return Ok(planCards);
             }

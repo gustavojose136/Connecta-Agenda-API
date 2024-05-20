@@ -1,5 +1,7 @@
 ﻿using Connect_agenda_data.repository.interfaces;
 using Connect_agenda_models.Models;
+using Connect_agenda_models.Models.ExitModels;
+using Connect_agenda_models.Models.FilterModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +19,11 @@ namespace Connect_agenda_services.Services
         }
 
 
-        public async Task<List<PlanCardModel>> GetAllPlanCards()
+        public async Task<PlanCardExitModel> GetAllPlanCards(PlanCardFilterModel filter)
         {
             try
             {
-                return await _planCardRepostory.GetAll();
+                return await _planCardRepostory.GetAll(filter);
             }
             catch(Exception ex)
 {
@@ -64,16 +66,17 @@ namespace Connect_agenda_services.Services
 
                 if(existPlanCard == null) throw new Exception("Plano não encontrado");
 
-                PlanCardModel NewPlancCard = new PlanCardModel();
                 
-                NewPlancCard = planCard;
+                existPlanCard.Name = planCard.Name;
+                existPlanCard.Description = planCard.Description;
+                existPlanCard.IsActive = planCard.IsActive;
 
-                NewPlancCard.UserUpdateId = userId;
-                NewPlancCard.UpdateDate = DateTime.Now;
+                existPlanCard.UserUpdateId = userId;
+                existPlanCard.UpdateDate = DateTime.Now;
 
-                await _planCardRepostory.Update(NewPlancCard);
+                await _planCardRepostory.Update(existPlanCard);
 
-                return (NewPlancCard);
+                return (existPlanCard);
             }
             catch (Exception ex)
             {

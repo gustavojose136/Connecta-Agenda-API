@@ -1,6 +1,8 @@
 ﻿using Connect_agenda_data.data;
 using Connect_agenda_data.repository.interfaces;
 using Connect_agenda_models.Models;
+using Connect_agenda_models.Models.ExitModels;
+using Connect_agenda_models.Models.FilterModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,14 +21,28 @@ namespace Connect_agenda_data.repository
             _dBContext = dbContext;
         }
 
-        public async Task<List<PlanCardModel>> GetAll()
+        public async Task<PlanCardExitModel> GetAll(PlanCardFilterModel filter)
         {
             try
             {
-                return await _dBContext.PlanCard
-                            .Include(x => x.UserCreate)
-                            .Include(x => x.UserUpdate)
-                            .ToListAsync();
+                PlanCardExitModel exit = new PlanCardExitModel();
+                var query = _dBContext.PlanCard.AsQueryable();
+
+                if (!string.IsNullOrEmpty(filter.Name))
+                    query = query.Where(x => x.Name.Contains(filter.Name));
+
+                if (filter.IsActive != null)
+                    query = query.Where(x => x.IsActive == filter.IsActive);
+
+
+                query = query.Include(x => x.UserCreate)
+                            .Include(x => x.UserUpdate);
+
+                exit.Total = await query.CountAsync();
+
+                exit.Data = await query.ToListAsync();
+
+                return exit;
             }
             catch (Exception ex)
             {

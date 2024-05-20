@@ -288,3 +288,11 @@ C:\Users\grosa\Documents\projetos\Connecta-Agenda-API\Connect-agenda-api\obj\Deb
 C:\Users\grosa\Documents\projetos\Connecta-Agenda-API\Connect-agenda-api\obj\Debug\net8.0\Connect-agenda-api.pdb
 C:\Users\grosa\Documents\projetos\Connecta-Agenda-API\Connect-agenda-api\obj\Debug\net8.0\Connect-agenda-api.genruntimeconfig.cache
 C:\Users\grosa\Documents\projetos\Connecta-Agenda-API\Connect-agenda-api\obj\Debug\net8.0\ref\Connect-agenda-api.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Microsoft.Extensions.Identity.Stores.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Connect-agenda-services.dll
+D:\projects\Connect-agenda\Connect-agenda-api\bin\Debug\net8.0\Connect-agenda-services.pdb
