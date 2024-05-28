@@ -13,8 +13,6 @@ namespace Connect_agenda_models.Models
         public UserModel User { get; set; }
         public string CompanyId { get; set; }
         public CompanyModel Company { get; set; }
-        public string RoleUserCompanyId { get; set; }
-        public RoleUserCompanyModel RoleUserCompany { get; set; }
         public bool IsActive { get; set; }
         public string UserUpdateId { get; set; }
         public UserModel UserUpdate { get; set; }

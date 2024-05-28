@@ -54,7 +54,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Observation")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("State")
@@ -109,9 +108,8 @@ namespace Connect_agenda_data.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("longblob");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
@@ -136,7 +134,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("UserUpdateId")
-                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
@@ -298,6 +295,47 @@ namespace Connect_agenda_data.Migrations
                     b.ToTable("PlanCard");
                 });
 
+            modelBuilder.Entity("Connect_agenda_models.Models.PlansModel", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("longtext");
+
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("longblob");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("UserCreateId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("UserUpdateId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserCreateId");
+
+                    b.HasIndex("UserUpdateId");
+
+                    b.ToTable("PlansModel");
+                });
+
             modelBuilder.Entity("Connect_agenda_models.Models.PorfissionalServiceModel", b =>
                 {
                     b.Property<string>("Id")
@@ -307,10 +345,10 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("Duration")
+                    b.Property<int?>("Duration")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
@@ -364,7 +402,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<bool>("IsActive")
@@ -435,7 +472,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("WorksDays")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -460,19 +496,18 @@ namespace Connect_agenda_data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
+                        .IsRequired()
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<int>("Duration")
                         .HasColumnType("int");
 
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("longblob");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
@@ -484,7 +519,7 @@ namespace Connect_agenda_data.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(65,30)");
 
-                    b.Property<DateTime>("UpdateDate")
+                    b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserCreateId")
@@ -492,7 +527,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("UserUpdateId")
-                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
@@ -562,10 +596,6 @@ namespace Connect_agenda_data.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("tinyint(1)");
 
-                    b.Property<string>("RoleUserCompanyId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime(6)");
 
@@ -584,8 +614,6 @@ namespace Connect_agenda_data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CompanyId");
-
-                    b.HasIndex("RoleUserCompanyId");
 
                     b.HasIndex("UserCreateId");
 
@@ -624,8 +652,8 @@ namespace Connect_agenda_data.Migrations
                     b.Property<string>("Gender")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Image")
-                        .HasColumnType("longtext");
+                    b.Property<byte[]>("Image")
+                        .HasColumnType("longblob");
 
                     b.Property<bool?>("IsActive")
                         .IsRequired()
@@ -654,7 +682,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<DateTime?>("UpdateDate")
-                        .IsRequired()
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserCreateId")
@@ -698,7 +725,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<DateTime?>("UpdatedAt")
-                        .IsRequired()
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserCreatedId")
@@ -706,7 +732,6 @@ namespace Connect_agenda_data.Migrations
                         .HasColumnType("varchar(255)");
 
                     b.Property<string>("UserUpdateId")
-                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
@@ -764,8 +789,7 @@ namespace Connect_agenda_data.Migrations
                     b.HasOne("Connect_agenda_models.Models.UserModel", "UserUpdate")
                         .WithMany()
                         .HasForeignKey("UserUpdateId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Address");
 
@@ -840,6 +864,25 @@ namespace Connect_agenda_data.Migrations
                         .WithMany()
                         .HasForeignKey("UserUpdateId")
                         .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("UserCreate");
+
+                    b.Navigation("UserUpdate");
+                });
+
+            modelBuilder.Entity("Connect_agenda_models.Models.PlansModel", b =>
+                {
+                    b.HasOne("Connect_agenda_models.Models.UserModel", "UserCreate")
+                        .WithMany()
+                        .HasForeignKey("UserCreateId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Connect_agenda_models.Models.UserModel", "UserUpdate")
+                        .WithMany()
+                        .HasForeignKey("UserUpdateId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("UserCreate");
 
@@ -960,8 +1003,7 @@ namespace Connect_agenda_data.Migrations
                     b.HasOne("Connect_agenda_models.Models.UserModel", "UserUpdate")
                         .WithMany()
                         .HasForeignKey("UserUpdateId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Company");
 
@@ -1005,12 +1047,6 @@ namespace Connect_agenda_data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Connect_agenda_models.Models.RoleUserCompanyModel", "RoleUserCompany")
-                        .WithMany()
-                        .HasForeignKey("RoleUserCompanyId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Connect_agenda_models.Models.UserModel", "UserCreate")
                         .WithMany()
                         .HasForeignKey("UserCreateId")
@@ -1030,8 +1066,6 @@ namespace Connect_agenda_data.Migrations
                         .IsRequired();
 
                     b.Navigation("Company");
-
-                    b.Navigation("RoleUserCompany");
 
                     b.Navigation("User");
 
@@ -1088,8 +1122,7 @@ namespace Connect_agenda_data.Migrations
                     b.HasOne("Connect_agenda_models.Models.UserModel", "UserUpdate")
                         .WithMany()
                         .HasForeignKey("UserUpdateId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("PlanCard");
 

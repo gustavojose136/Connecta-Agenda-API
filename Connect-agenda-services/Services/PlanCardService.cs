@@ -26,7 +26,7 @@ namespace Connect_agenda_services.Services
                 return await _planCardRepostory.GetAll(filter);
             }
             catch(Exception ex)
-{
+            {
                 throw new Exception(ex.Message);
             }
         }

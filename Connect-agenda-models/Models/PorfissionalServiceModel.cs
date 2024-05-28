@@ -14,8 +14,8 @@ namespace Connect_agenda_models.Models
         public string ServiceId { get; set; }
         public ServiceModel Service { get; set; }
         public double Price { get; set; }   
-        public string Description { get; set; }
-        public int Duration { get; set; }
+        public string? Description { get; set; }
+        public int? Duration { get; set; }
         public bool IsActive { get; set; }
         public string UserUpdateId { get; set; }
         public UserModel UserUpdate { get; set; }

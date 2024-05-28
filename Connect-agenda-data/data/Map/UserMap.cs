@@ -29,7 +29,7 @@ namespace Connect_agenda_data.data.Map
             builder.Property(u => u.AddresId).IsRequired();
             builder.Property(u => u.Phone).IsRequired();
             builder.Property(u => u.UserUpdateId);
-            builder.Property(u => u.UpdateDate).IsRequired();
+            builder.Property(u => u.UpdateDate);
             builder.Property(u => u.UserCreateId);
             builder.Property(u => u.CreateDate).IsRequired();
 

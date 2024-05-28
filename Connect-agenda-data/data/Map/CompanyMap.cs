@@ -17,13 +17,13 @@ namespace Connect_agenda_data.data.Map
             builder.Property(u => u.Name).IsRequired();
             builder.Property(u => u.Email);
             builder.Property(u => u.Cnpj).IsRequired();
-            builder.Property(u => u.Image).IsRequired();
+            builder.Property(u => u.Image);
             builder.Property(u => u.Phone).IsRequired();
             builder.Property(u => u.AddressId).IsRequired();
             builder.Property(u => u.OnwerId).IsRequired();
             builder.Property(u => u.IsActive).IsRequired();
-            builder.Property(u => u.UserUpdateId).IsRequired();
-            builder.Property(u => u.UpdateDate).IsRequired();
+            builder.Property(u => u.UserUpdateId);
+            builder.Property(u => u.UpdateDate);
             builder.Property(u => u.UserCreateId).IsRequired();
             builder.Property(u => u.CreateDate).IsRequired();
 

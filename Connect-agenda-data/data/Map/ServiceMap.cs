@@ -18,11 +18,11 @@ namespace Connect_agenda_data.data.Map
             builder.Property(u => u.Description);
             builder.Property(u => u.Price).IsRequired();
             builder.Property(u => u.Duration).IsRequired();
-            builder.Property(u => u.Image).IsRequired();
+            builder.Property(u => u.Image);
             builder.Property(u => u.IsActive).IsRequired();
             builder.Property(u => u.CompanyId).IsRequired();
-            builder.Property(u => u.UserUpdateId).IsRequired();
-            builder.Property(u => u.UpdateDate).IsRequired();
+            builder.Property(u => u.UserUpdateId);
+            builder.Property(u => u.UpdateDate);
             builder.Property(u => u.UserCreateId).IsRequired();
             builder.Property(u => u.CreateDate).IsRequired();
 

@@ -22,7 +22,7 @@ namespace Connect_agenda_data.data.Map
             builder.Property(u => u.ZipCode).IsRequired();
             builder.Property(u => u.State).IsRequired();
             builder.Property(u => u.Country).IsRequired();
-            builder.Property(u => u.Observation).IsRequired();
+            builder.Property(u => u.Observation);
             builder.Property(u => u.IsActive).IsRequired();
             builder.Property(u => u.UserUpdateId);
             builder.Property(u => u.UpdateDate);

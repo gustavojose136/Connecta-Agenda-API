@@ -12,13 +12,13 @@ namespace Connect_agenda_models.Models
         public string Id { get; set; }
         public string Name { get; set; }
         public string Street { get; set; }
-        public string Neighborhood { get; set; }
+        public string? Neighborhood { get; set; }
         public string Number { get; set; }
         public string City { get; set; }
         public string ZipCode { get; set; }
         public string State { get; set; }
         public string Country { get; set; }
-        public string Observation { get; set; }
+        public string? Observation { get; set; }
         public bool IsActive { get; set; }
         public string UserUpdateId { get; set; }
         public UserModel UserUpdate { get; set; }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Connect-agenda-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d85ff0d005468b3cc47a4b08bbc69ee469f6fd6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9ffbff86cd55861d9a19d2795e412db997c4c6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Connect-agenda-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Connect-agenda-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

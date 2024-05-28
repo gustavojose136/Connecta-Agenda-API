@@ -19,8 +19,8 @@ namespace Connect_agenda_data.data.Map
             builder.Property(u => u.UserCompanyId).IsRequired();
             builder.Property(u => u.WorksDays);
             builder.Property(u => u.IsActive).IsRequired();
-            builder.Property(u => u.UserUpdateId).IsRequired();
-            builder.Property(u => u.UpdateDate).IsRequired();
+            builder.Property(u => u.UserUpdateId);
+            builder.Property(u => u.UpdateDate);
             builder.Property(u => u.UserCreateId).IsRequired();
             builder.Property(u => u.CreateDate).IsRequired();
 

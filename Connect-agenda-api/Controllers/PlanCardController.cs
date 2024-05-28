@@ -1,6 +1,7 @@
 ﻿using Connect_agenda_models.Models;
 using Connect_agenda_models.Models.FilterModels;
 using Connect_agenda_services.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -8,6 +9,7 @@ using System.Security.Claims;
 namespace Connect_agenda_api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class PlanCardController : ControllerBase
     {

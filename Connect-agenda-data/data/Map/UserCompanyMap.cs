@@ -16,10 +16,9 @@ namespace Connect_agenda_data.data.Map
             builder.HasKey(u => u.Id);
             builder.Property(u => u.UserId).IsRequired();
             builder.Property(u => u.CompanyId).IsRequired();
-            builder.Property(u => u.RoleUserCompanyId).IsRequired();
             builder.Property(u => u.IsActive).IsRequired();
-            builder.Property(u => u.UserUpdateId).IsRequired();
-            builder.Property(u => u.UpdateDate).IsRequired();
+            builder.Property(u => u.UserUpdateId);
+            builder.Property(u => u.UpdateDate);
             builder.Property(u => u.UserCreateId).IsRequired();
             builder.Property(u => u.CreateDate).IsRequired();
 
@@ -31,11 +30,6 @@ namespace Connect_agenda_data.data.Map
             builder.HasOne(u => u.Company)
                     .WithMany()
                     .HasForeignKey(p => p.CompanyId)
-                    .OnDelete(DeleteBehavior.Restrict);
-
-            builder.HasOne(u => u.RoleUserCompany)
-                    .WithMany()
-                    .HasForeignKey(p => p.RoleUserCompanyId)
                     .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(u => u.UserUpdate)

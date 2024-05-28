@@ -14,7 +14,7 @@ namespace Connect_agenda_models.Models
         public RoleModel Role { get; set; }
         public string UserCompanyId { get; set; }
         public UserCompanyModel UserCompany { get; set; }
-        public string WorksDays { get; set; }
+        public string? WorksDays { get; set; }
         public bool IsActive { get; set; }
         public string UserUpdateId { get; set; }
         public UserModel UserUpdate { get; set; }

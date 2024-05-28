@@ -22,7 +22,7 @@ namespace Connect_agenda_models.Models
         public DateTime? BirthDate { get; set; }
         public bool? IsActive { get; set; }
         public bool? IsAdmin { get; set; }
-        public string? Image { get; set; }
+        public Byte[]? Image { get; set; }
         public string? AddresId { get; set; }
         public AddresModel? Addres { get; set; }
         public string? UserUpdateId { get; set; }

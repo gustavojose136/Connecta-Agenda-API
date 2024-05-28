@@ -18,8 +18,8 @@ namespace Connect_agenda_data.data.Map
             builder.Property(u => u.IdUser).IsRequired();
             builder.Property(u => u.PlanCardNumber).IsRequired();
             builder.Property(u => u.IsActive).IsRequired();
-            builder.Property(u => u.UserUpdateId).IsRequired();
-            builder.Property(u => u.UpdatedAt).IsRequired();
+            builder.Property(u => u.UserUpdateId);
+            builder.Property(u => u.UpdatedAt);
             builder.Property(u => u.UserCreatedId).IsRequired();
             builder.Property(u => u.CreatedAt).IsRequired();
 
