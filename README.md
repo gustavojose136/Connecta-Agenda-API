@@ -40,3 +40,23 @@ Front-end: Angular
 Back-end: .Net
 Banco: SQL
 
+#Como usar:
+- Ter o sdk do .net 8 instalado
+- Dar o comando update-database no console de pacotes nuget para criar o banco
+- Dar o insert (Logo a baixo), para ter um usuario criado no sistema
+- Rodar o projeto
+- Login: gjose2980@gmail.com
+- Senha: teste
+
+#Insert:
+INSERT INTO `user` VALUES ('eaafdb55-ad79-4dfe-88cf-0b3739158753','gustavo','gjose2980@gmail.com','46070d4bf934fb0d4b06d9e2c46e346944e322444900a435d7d9a95e6d7435f5','4242','BETONEIRA','2024-04-11 00:23:32.691000',1,1,NULL,'teste','2024-04-11 00:23:32.691000','2024-04-11 00:23:32.691000',NULL,NULL,'4242','432','d');
+
+INSERT INTO `address` VALUES ('teste','das','ds','ds','fs','fs','fs','fs',0,NULL,'2024-04-10 21:39:58.000000',NULL,'2024-04-10 21:39:58.000000','ds','ds');
+
+INSERT INTO `company` VALUES ('EMPRESATESTE','Teste Company','teste@example.com',1,_binary 'image.jpg','1234567890','teste','eaafdb55-ad79-4dfe-88cf-0b3739158753','eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 20:13:19.000000','eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 20:13:19.000000','12345678000100');
+
+INSERT INTO `usercompany` VALUES ('RELACIOMENTOTESTE','eaafdb55-ad79-4dfe-88cf-0b3739158753','EMPRESATESTE',1,'eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 12:34:56.000000','eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 12:00:00.000000');
+
+INSERT INTO `role` VALUES ('Admin','Admin','Administrator role with full permissions','READ,WRITE,DELETE',1,'EMPRESATESTE','eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 12:34:56.000000','eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 12:00:00.000000'),('Cliente','Cliente','Cliente PadrÃ£o','READ',1,'EMPRESATESTE','eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 12:34:56.000000','eaafdb55-ad79-4dfe-88cf-0b3739158753','2024-05-20 12:00:00.000000');
+
+
