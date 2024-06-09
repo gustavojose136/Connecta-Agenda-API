@@ -79,6 +79,9 @@ builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<IUserCompanyRepository, UserCompanyRepository>();
 builder.Services.AddScoped<IAdrressRepository, AdrressRepository>();
 builder.Services.AddScoped<IProfissinalServiceRepository, ProfissinalServiceRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IRoleUserCompanyRepository, RoleUserCompanyRepository>();
+builder.Services.AddScoped<IUserPlanCardRepository, UserPlanCardRepository>();
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<LoginService>();

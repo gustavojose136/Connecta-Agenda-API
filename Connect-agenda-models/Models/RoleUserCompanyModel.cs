@@ -8,7 +8,7 @@ namespace Connect_agenda_models.Models
 {
     public class RoleUserCompanyModel
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; }
         public string RoleId { get; set; }
         public RoleModel Role { get; set; }

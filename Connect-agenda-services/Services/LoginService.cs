@@ -35,7 +35,7 @@ namespace Connect_agenda_services.Services
 
                 var userCompany = await _userCompanyRepository.GetByUserId(user.Id);
 
-                return _tokenService.GenerateToken(user.Id, user.Name, userCompany.Id);
+                return _tokenService.GenerateToken(user.Id, user.Name, userCompany.CompanyId);
             }
             catch(Exception ex)
             {

@@ -10,7 +10,7 @@ namespace Connect_agenda_models.Models.AddModels
     {
         public Profissional ProfissionalData { get; set; } = new Profissional();
         public ProfissionalAddres ProfissionalAddres { get; set; } = new ProfissionalAddres();
-        public List<ProfissionalService>? ProfissionalServices { get; set; }
+        public List<ProfissionalServiceShortModel>? ProfissionalServices { get; set; }
     }
 
     public class Profissional
@@ -26,6 +26,7 @@ namespace Connect_agenda_models.Models.AddModels
         public DateTime? BirthDate { get; set; }
         public bool? IsAdmin { get; set; }
         public Byte[]? Image { get; set; }
+        public string? WorksDays { get; set; }
     }
 
     public class ProfissionalAddres
@@ -41,7 +42,7 @@ namespace Connect_agenda_models.Models.AddModels
         public string? Observation { get; set; }
     }
 
-    public class ProfissionalService
+    public class ProfissionalServiceShortModel
     {
         public string? ServiceId { get; set; }
         public double Price { get; set; }

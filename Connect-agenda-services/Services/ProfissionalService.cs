@@ -17,16 +17,18 @@ namespace Connect_agenda_services.Services
         private readonly IUserRepository _userRepository;
         private readonly IUserCompanyRepository _userCompanyRepository;
         private readonly IProfissinalServiceRepository _profissinalServiceRepository;
+        private readonly IRoleUserCompanyRepository _roleUserCompanyRepository;
 
-        public ProfissionalService(IAdrressRepository adrressRepository, IUserRepository userRepository, IUserCompanyRepository userCompanyRepository, IProfissinalServiceRepository profissinalServiceRepository)
+        public ProfissionalService(IAdrressRepository adrressRepository, IUserRepository userRepository, IUserCompanyRepository userCompanyRepository, IProfissinalServiceRepository profissinalServiceRepository, IRoleUserCompanyRepository roleUserCompanyRepository)
         {
             _adrressRepository = adrressRepository;
             _userRepository = userRepository;
             _userCompanyRepository = userCompanyRepository;
             _profissinalServiceRepository = profissinalServiceRepository;
+            _roleUserCompanyRepository = roleUserCompanyRepository;
         }
 
-        public async Task<bool> CreateProfissional(ProfissinalAddModel profissinalAdd, string createUserId)
+        public async Task<string> CreateProfissional(ProfissinalAddModel profissinalAdd, string createUserId, string companyId)
         {
             try
             {
@@ -34,9 +36,13 @@ namespace Connect_agenda_services.Services
 
                 var profissionalUser = await CreateProfissionalUser(profissinalAdd, profissionalAddres.Id, createUserId);
 
-                var profissionalUserCompany = await CreateProfissionalUser(profissinalAdd, profissionalUser.Id, createUserId);
+                var profissionalUserCompany = await CreateProfissionalUserCompany(profissinalAdd, profissionalUser.Id, createUserId, companyId);
 
-                return true;
+                var profissionalRole = await CreateProfissionalRoleUserCompany(profissinalAdd, createUserId, profissionalUserCompany.Id);
+
+                var services = await CreateProfissionalServices(profissinalAdd, createUserId, profissionalUserCompany.Id);
+
+                return "Profissional Cadastrado com sucesso!";
             }
             catch (Exception ex)
             {
@@ -134,6 +140,68 @@ namespace Connect_agenda_services.Services
                 await _userCompanyRepository.Add(userCompany);
 
                 return userCompany;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<List<ProfissionalServiceModel>> CreateProfissionalServices(ProfissinalAddModel profissional, string createUserId, string profissionalId)
+        {
+            try
+            {
+                List<ProfissionalServiceModel> servicos = new List<ProfissionalServiceModel>();
+
+                for (int i = 0; i < profissional.ProfissionalServices?.Count; i++)
+                {
+                    ProfissionalServiceModel profissionalService = new ProfissionalServiceModel();
+
+                    var serviceQueue = profissional.ProfissionalServices[i];
+
+                    profissionalService.ProfissionalId = profissionalId;
+                    profissionalService.ServiceId = serviceQueue.ServiceId;
+                    profissionalService.Price = serviceQueue.Price;
+                    profissionalService.Description = serviceQueue.Description;
+                    profissionalService.Duration = serviceQueue.Duration;
+                    profissionalService.IsActive = true;
+                    profissionalService.UserUpdateId = createUserId;
+                    profissionalService.UpdateDate = DateTime.Now;
+                    profissionalService.UserCreateId = createUserId;
+                    profissionalService.CreateDate = DateTime.Now;
+
+                    servicos.Add(profissionalService);
+
+                    await _profissinalServiceRepository.Post(profissionalService);
+                }
+
+                return servicos;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<RoleUserCompanyModel> CreateProfissionalRoleUserCompany(ProfissinalAddModel profissional, string createUserId, string userCompanyId)
+        {
+            try
+            {
+                RoleUserCompanyModel roleUserCompany = new RoleUserCompanyModel();
+
+                roleUserCompany.Name = "Profissional";
+                roleUserCompany.RoleId = "Profissional";
+                roleUserCompany.UserCompanyId = userCompanyId;
+                roleUserCompany.WorksDays = profissional.ProfissionalData.WorksDays;
+                roleUserCompany.IsActive = true;
+                roleUserCompany.UpdateDate = DateTime.Now;
+                roleUserCompany.UserUpdateId = createUserId;
+                roleUserCompany.CreateDate = DateTime.Now;
+                roleUserCompany.UserCreateId = createUserId;
+
+                await _roleUserCompanyRepository.Post(roleUserCompany);
+
+                return roleUserCompany;
             }
             catch (Exception ex)
             {

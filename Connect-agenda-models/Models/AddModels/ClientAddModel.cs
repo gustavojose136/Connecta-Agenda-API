@@ -8,8 +8,8 @@ namespace Connect_agenda_models.Models.AddModels
 {
     public class ClientAddModel
     {
-        public Client ProfissionalData { get; set; } = new Client();
-        public ClientAddres ProfissionalAddres { get; set; } = new ClientAddres();
+        public Client ClientData { get; set; } = new Client();
+        public ClientAddres ClientAddres { get; set; } = new ClientAddres();
         public List<ClientPlans>? ClientPlans { get; set; }
     }
 
