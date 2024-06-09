@@ -1,4 +1,5 @@
 ﻿using Connect_agenda_data.repository.interfaces;
+using Connect_agenda_models.Models.FilterModels;
 using Connect_agenda_models.Models.Utils;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,13 @@ namespace Connect_agenda_services.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly TokenService _tokenService;
+        private readonly IUserCompanyRepository _userCompanyRepository;
 
-        public LoginService(IUserRepository userRepository, TokenService tokenService)
+        public LoginService(IUserRepository userRepository, TokenService tokenService, IUserCompanyRepository userCompanyRepository)
         {
             _userRepository = userRepository;
             _tokenService = tokenService;
+            _userCompanyRepository = userCompanyRepository;
         }
         //Metodo que faz login
         public async Task<TokenModel> Login(LoginModel login)
@@ -30,7 +33,9 @@ namespace Connect_agenda_services.Services
                 //exeption
                 if (user == null) return BadRequest("Usuário ou senha inválidos");
 
-                return _tokenService.GenerateToken(user.Id, user.Name);
+                var userCompany = await _userCompanyRepository.GetByUserId(user.Id);
+
+                return _tokenService.GenerateToken(user.Id, user.Name, userCompany.Id);
             }
             catch(Exception ex)
             {

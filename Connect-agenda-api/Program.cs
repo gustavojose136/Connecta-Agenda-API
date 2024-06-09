@@ -77,6 +77,8 @@ builder.Services.AddScoped<IPlanCardRepository, PlanCardRepository>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<IUserCompanyRepository, UserCompanyRepository>();
+builder.Services.AddScoped<IAdrressRepository, AdrressRepository>();
+builder.Services.AddScoped<IProfissinalServiceRepository, ProfissinalServiceRepository>();
 
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<LoginService>();
@@ -85,6 +87,8 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<PlanCardService>();
 builder.Services.AddScoped<ServiceService>();
 builder.Services.AddScoped<CompanyService>();
+builder.Services.AddScoped<ProfissionalService>();
+builder.Services.AddScoped<ClientService>();
 
 
 var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection("SecurityKey").Value);

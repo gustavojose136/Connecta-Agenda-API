@@ -3524,21 +3524,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gjose\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\gjose\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\Connect-agenda\\Connect-agenda-data\\Connect-agenda-data.csproj",
+      "projectUniqueName": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
       "projectName": "Connect-agenda-data",
-      "projectPath": "D:\\projects\\Connect-agenda\\Connect-agenda-data\\Connect-agenda-data.csproj",
+      "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
       "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\Connect-agenda\\Connect-agenda-data\\obj\\",
+      "outputPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\gjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -3548,14 +3544,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\projects\\Connect-agenda\\Connect-agenda-models\\Connect-agenda-models.csproj": {
-              "projectPath": "D:\\projects\\Connect-agenda\\Connect-agenda-models\\Connect-agenda-models.csproj"
+            "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+              "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
             }
           }
         }
@@ -3566,7 +3563,9 @@
         ]
       },
       "restoreAuditProperties": {
-        "enableAudit": "default"
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3622,7 +3621,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

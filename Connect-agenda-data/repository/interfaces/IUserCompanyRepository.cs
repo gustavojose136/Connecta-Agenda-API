@@ -13,6 +13,7 @@ namespace Connect_agenda_data.repository.interfaces
         public Task<List<UserCompanyModel>> GetAll(UserCompanyFilterModel filter);
 
         public Task<UserCompanyModel> GetById(string id);
+        public Task<UserCompanyModel> GetByUserId(string userId);
 
         public Task<UserCompanyModel> Add(UserCompanyModel userCompany);
 

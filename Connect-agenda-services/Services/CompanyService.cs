@@ -49,7 +49,6 @@ namespace Connect_agenda_services.Services
         {
             try
             {
-                company.Id = Guid.NewGuid().ToString();
                 company.OnwerId = userId;
                 company.IsActive = true;
 

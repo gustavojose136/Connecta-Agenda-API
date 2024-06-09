@@ -67,6 +67,19 @@ namespace Connect_agenda_data.repository
             }
         }
 
+        public async Task<UserCompanyModel> GetByUserId(string userId)
+        {
+            try
+            {
+                return await _dBContext.UserCompany
+                                                .FirstOrDefaultAsync(x => x.UserId == userId);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<UserCompanyModel> Add(UserCompanyModel userCompany)
         {
             try

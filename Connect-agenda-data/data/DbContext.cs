@@ -23,7 +23,7 @@ namespace Connect_agenda_data.data
         public DbSet<LogsModel> Logs { get; set; }
         public DbSet<OrderModel> Order { get; set; }
         public DbSet<PlanCardModel> PlanCard { get; set; }
-        public DbSet<PorfissionalServiceModel> ProfissionalService { get; set; }
+        public DbSet<ProfissionalServiceModel> ProfissionalService { get; set; }
         public DbSet<RoleModel> Role { get; set; }
         public DbSet<RoleUserCompanyModel> RoleUserCompany { get; set; }
         public DbSet<ServiceModel> Service { get; set; }

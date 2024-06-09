@@ -9,9 +9,9 @@ namespace Connect_agenda_models.Models
 {
     public class OrderModel
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string ProfissionalServiceId { get; set; }
-        public PorfissionalServiceModel ProfissionalService { get; set; }
+        public ProfissionalServiceModel ProfissionalService { get; set; }
         public string ClientId { get; set; }
         public UserModel Client { get; set; }
         public string Observation { get; set; }

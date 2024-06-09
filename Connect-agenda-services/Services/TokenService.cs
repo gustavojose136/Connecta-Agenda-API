@@ -22,7 +22,7 @@ namespace Connect_agenda_services.Services
             _configuration = configuration;
         }
 
-        public TokenModel GenerateToken(string userID, string name)
+        public TokenModel GenerateToken(string userID, string name, string companyId)
         {
             var key = Encoding.ASCII.GetBytes(_configuration["SecurityKey"]);
             var tokenConfig = new SecurityTokenDescriptor
@@ -31,6 +31,7 @@ namespace Connect_agenda_services.Services
                 {
                 new Claim(ClaimTypes.Name, userID),
                 new Claim(ClaimTypes.NameIdentifier, name),
+                new Claim(ClaimTypes.Surname, companyId)
                 }),
                 Expires = DateTime.UtcNow.AddHours(8),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

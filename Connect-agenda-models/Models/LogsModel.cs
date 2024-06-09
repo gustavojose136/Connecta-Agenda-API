@@ -8,7 +8,7 @@ namespace Connect_agenda_models.Models
 {
     public class LogsModel
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Type { get; set; }
         public string Module { get; set; }
         public string Message { get; set; }

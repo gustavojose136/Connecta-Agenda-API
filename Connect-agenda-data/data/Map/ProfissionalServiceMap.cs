@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Connect_agenda_data.data.Map
 {
-    public class ProfissionalServiceMap : IEntityTypeConfiguration<PorfissionalServiceModel>
+    public class ProfissionalServiceMap : IEntityTypeConfiguration<ProfissionalServiceModel>
     {
-        public void Configure(EntityTypeBuilder<PorfissionalServiceModel> builder)
+        public void Configure(EntityTypeBuilder<ProfissionalServiceModel> builder)
         {
             builder.HasKey(u => u.Id);
             builder.Property(u => u.ProfissionalId).IsRequired();

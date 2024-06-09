@@ -8,7 +8,7 @@ namespace Connect_agenda_models.Models
 {
     public class SpecialitsModel
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; }
         public string UserId { get; set; }
         public UserModel User { get; set; }

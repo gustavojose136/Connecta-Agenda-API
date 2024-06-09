@@ -8,7 +8,7 @@ namespace Connect_agenda_models.Models
 {
     public class UserPlanCardModel
     {
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string IdPlanCard { get; set; }
         public PlanCardModel PlanCard { get; set; }
         public string IdUser { get; set; }

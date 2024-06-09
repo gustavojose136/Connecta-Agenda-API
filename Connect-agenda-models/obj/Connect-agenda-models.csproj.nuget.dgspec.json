@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\Connect-agenda\\Connect-agenda-models\\Connect-agenda-models.csproj": {}
+    "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {}
   },
   "projects": {
-    "D:\\projects\\Connect-agenda\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+    "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\Connect-agenda\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "projectUniqueName": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
         "projectName": "Connect-agenda-models",
-        "projectPath": "D:\\projects\\Connect-agenda\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
         "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\Connect-agenda\\Connect-agenda-models\\obj\\",
+        "outputPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\gjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -25,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +37,9 @@
           ]
         },
         "restoreAuditProperties": {
-          "enableAudit": "default"
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
