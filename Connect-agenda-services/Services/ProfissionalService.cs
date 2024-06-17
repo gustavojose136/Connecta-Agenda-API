@@ -103,7 +103,7 @@ namespace Connect_agenda_services.Services
                 user.Cpf = profissionalUser.Cpf;
                 user.Rg = profissionalUser.Rg;
                 user.BirthDate = profissionalUser.BirthDate;
-                user.IsAdmin = profissionalUser.IsAdmin;
+                user.IsAdmin = false;
                 user.IsActive = true;
                 user.AddresId = addressId;
                 user.UserUpdateId = createUserId;

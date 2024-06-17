@@ -26,6 +26,10 @@ namespace Connect_agenda_api.Controllers
         {
             try
             {
+                var companyId = User.FindFirstValue(ClaimTypes.Surname);
+
+                filter.CompanyId = companyId;
+
                 var result = await _serviceService.GetAll(filter);
                 return Ok(result);
             }
@@ -40,7 +44,7 @@ namespace Connect_agenda_api.Controllers
         {
             try
             {
-                string companyId = "EMPRESATESTE";
+                string companyId = User.FindFirstValue(ClaimTypes.Surname);
                 string userId = User.FindFirstValue(ClaimTypes.Name);
 
                 var result = await _serviceService.Post(service, companyId, userId);

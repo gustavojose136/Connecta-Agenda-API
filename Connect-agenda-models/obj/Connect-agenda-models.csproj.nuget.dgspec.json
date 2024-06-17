@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {}
+    "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {}
   },
   "projects": {
-    "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+    "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "projectUniqueName": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
         "projectName": "Connect-agenda-models",
-        "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
         "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
         "outputPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\obj\\",
         "projectStyle": "PackageReference",

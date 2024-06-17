@@ -3529,9 +3529,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
+      "projectUniqueName": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
       "projectName": "Connect-agenda-data",
-      "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
+      "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
       "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
       "outputPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\obj\\",
       "projectStyle": "PackageReference",
@@ -3551,8 +3551,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
-              "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
+            "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+              "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
             }
           }
         }

@@ -4,6 +4,7 @@ using Connect_agenda_data.data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Connect_agenda_data.Migrations
 {
     [DbContext(typeof(ConnectAgendaContext))]
-    partial class ConnectAgendaContextModelSnapshot : ModelSnapshot
+    [Migration("20240617015814_updateOrder")]
+    partial class updateOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -191,10 +194,6 @@ namespace Connect_agenda_data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("CompanyId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime(6)");
 
@@ -251,8 +250,6 @@ namespace Connect_agenda_data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ClientId");
-
-                    b.HasIndex("CompanyId");
 
                     b.HasIndex("PlanCardId");
 
@@ -825,12 +822,6 @@ namespace Connect_agenda_data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Connect_agenda_models.Models.CompanyModel", "Company")
-                        .WithMany()
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("Connect_agenda_models.Models.PlanCardModel", "PlanCard")
                         .WithMany()
                         .HasForeignKey("PlanCardId")
@@ -855,8 +846,6 @@ namespace Connect_agenda_data.Migrations
                         .IsRequired();
 
                     b.Navigation("Client");
-
-                    b.Navigation("Company");
 
                     b.Navigation("PlanCard");
 

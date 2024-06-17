@@ -10,13 +10,16 @@ namespace Connect_agenda_models.Models
     public class OrderModel
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
-        public string ProfissionalServiceId { get; set; }
-        public ProfissionalServiceModel ProfissionalService { get; set; }
-        public string ClientId { get; set; }
-        public UserModel Client { get; set; }
-        public string Observation { get; set; }
+        public string ProfissionalServiceId { get; set; } = string.Empty;
+        public ProfissionalServiceModel ProfissionalService { get; set; } = new ProfissionalServiceModel();
+        public string ClientId { get; set; } = string.Empty;
+        public string CompanyId { get; set; } = string.Empty;
+        public CompanyModel Company { get; set; } = new CompanyModel();
+        public UserModel Client { get; set; } = new UserModel();
+        public string Observation { get; set; } = string.Empty;
         public OrderStatusEnumModel Status { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
         public PaymentMethodEnum paymentMethod { get; set; }
         public string? PlanCardId { get; set; }
         public PlanCardModel? PlanCard { get; set; }
@@ -25,11 +28,11 @@ namespace Connect_agenda_models.Models
         public bool IsPaid { get; set; }
         public bool IsPlanCoop { get;set; }
         public double? PricePlanCoop { get; set; }
-        public string UserUpdateId { get; set; }
-        public UserModel UserUpdate { get; set; }
+        public string UserUpdateId { get; set; } = string.Empty;
+        public UserModel UserUpdate { get; set; } = new UserModel();
         public DateTime UpdateDate { get; set; }
-        public string UserCreateId { get; set; }
-        public UserModel UserCreate { get; set; }
+        public string UserCreateId { get; set; } = string.Empty;
+        public UserModel UserCreate { get; set; } = new UserModel();
         public DateTime CreateDate { get; set; }
     }
 }

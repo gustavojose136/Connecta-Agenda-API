@@ -16,9 +16,11 @@ namespace Connect_agenda_data.data.Map
             builder.HasKey(u => u.Id);
             builder.Property(u => u.ProfissionalServiceId).IsRequired();
             builder.Property(u => u.ClientId).IsRequired();
+            builder.Property(u => u.CompanyId).IsRequired();
             builder.Property(u => u.Observation);
             builder.Property(u => u.Status).IsRequired();
-            builder.Property(u => u.Date).IsRequired();
+            builder.Property(u => u.StartDate).IsRequired();
+            builder.Property(u => u.EndDate).IsRequired();
             builder.Property(u => u.paymentMethod).IsRequired();
             builder.Property(u => u.PlanCardId);
             builder.Property(u => u.Price).IsRequired();
@@ -39,6 +41,11 @@ namespace Connect_agenda_data.data.Map
             builder.HasOne(u => u.Client)
                     .WithMany()
                     .HasForeignKey(p => p.ClientId)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(u => u.Company)
+                    .WithMany()
+                    .HasForeignKey(p => p.CompanyId)
                     .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(u => u.PlanCard)

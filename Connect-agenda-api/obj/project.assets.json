@@ -4499,9 +4499,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
+      "projectUniqueName": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
       "projectName": "Connect-agenda-api",
-      "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
+      "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
       "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
       "outputPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-api\\obj\\",
       "projectStyle": "PackageReference",
@@ -4521,14 +4521,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
-              "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj"
+            "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
+              "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj"
             },
-            "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
-              "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
+            "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+              "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
             },
-            "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {
-              "projectPath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj"
+            "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {
+              "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj"
             }
           }
         }
