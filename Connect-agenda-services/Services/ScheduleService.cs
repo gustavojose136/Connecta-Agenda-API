@@ -22,21 +22,21 @@ namespace Connect_agenda_services.Services
             _orderRepository = orderRepository;
         }
 
-        //public async Task<List<UserCompanyModel>> getAll(OrderAddModel filter, string companyId)
-        //{
-        //    try
-        //    {
-        //        filter.CompanyId = companyId;
+        public async Task<List<UserCompanyModel>> getAll(OrderFilterModel filter, string companyId)
+        {
+            try
+            {
+                filter.CompanyId = companyId;
 
-        //        var clients = await _userCompanyRepository.GetAll(filter);
+                //var clients = await _userCompanyRepository.GetAll(filter);
 
-        //        return clients;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-        //}
+                return new List<UserCompanyModel>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
 
         public async Task<OrderModel> CreateSchedule(OrderAddModel orderAdd, string companyId, string userCreateId)
         {
