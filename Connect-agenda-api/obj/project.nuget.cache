@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H9SHj5DPh08=",
+  "dgSpecHash": "P2rrNItVtdA=",
   "success": true,
-  "projectFilePath": "D:\\projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
+  "projectFilePath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gjose\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\gjose\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
