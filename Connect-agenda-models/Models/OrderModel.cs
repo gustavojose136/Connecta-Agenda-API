@@ -13,9 +13,9 @@ namespace Connect_agenda_models.Models
         public string ProfissionalServiceId { get; set; } = string.Empty;
         public ProfissionalServiceModel ProfissionalService { get; set; } = new ProfissionalServiceModel();
         public string ClientId { get; set; } = string.Empty;
+        public UserModel Client { get; set; } = new UserModel();
         public string CompanyId { get; set; } = string.Empty;
         public CompanyModel Company { get; set; } = new CompanyModel();
-        public UserModel Client { get; set; } = new UserModel();
         public string Observation { get; set; } = string.Empty;
         public OrderStatusEnumModel Status { get; set; }
         public DateTime StartDate { get; set; }

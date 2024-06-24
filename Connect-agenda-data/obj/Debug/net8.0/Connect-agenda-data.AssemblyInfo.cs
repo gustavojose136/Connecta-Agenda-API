@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Connect-agenda-data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb023e80603c8d5930c0523b54b07680860f5cff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69220b3086d13b70b53fdb4303ff278cf6e5959f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Connect-agenda-data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Connect-agenda-data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
