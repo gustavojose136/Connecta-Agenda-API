@@ -395,7 +395,6 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
+.idea/
 *.sln.iml
-
-# Always ignore .env files
-.env
+*.idea_modules/
