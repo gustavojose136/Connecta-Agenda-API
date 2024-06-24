@@ -1,15 +1,8 @@
 ﻿using Connect_agenda_data.data;
 using Connect_agenda_data.repository.interfaces;
 using Connect_agenda_models.Models;
-using Connect_agenda_models.Models.Enums;
-using Connect_agenda_models.Models.ExitModels;
 using Connect_agenda_models.Models.FilterModels;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Connect_agenda_data.repository
 {
@@ -102,6 +95,21 @@ namespace Connect_agenda_data.repository
                 await _dBContext.SaveChangesAsync();
 
                 return order;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public Task<OrderModel> Update(OrderModel order)
+        {
+            try
+            {
+                _dBContext.Order.Update(order);
+                _dBContext.SaveChanges();
+
+                return Task.FromResult(order);
             }
             catch (Exception ex)
             {

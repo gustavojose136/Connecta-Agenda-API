@@ -1,12 +1,6 @@
-﻿using Connect_agenda_data.repository;
-using Connect_agenda_data.repository.interfaces;
+﻿using Connect_agenda_data.repository.interfaces;
 using Connect_agenda_models.Models.FilterModels;
 using Connect_agenda_models.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Connect_agenda_models.Models.AddModels;
 
 namespace Connect_agenda_services.Services
@@ -22,15 +16,13 @@ namespace Connect_agenda_services.Services
             _orderRepository = orderRepository;
         }
 
-        public async Task<List<UserCompanyModel>> getAll(OrderFilterModel filter, string companyId)
+        public async Task<List<OrderModel>> getAll(OrderFilterModel filter, string companyId)
         {
             try
             {
                 filter.CompanyId = companyId;
-
-                //var clients = await _userCompanyRepository.GetAll(filter);
-
-                return new List<UserCompanyModel>();
+                
+                return await _orderRepository.GetOrderByFilter(filter);
             }
             catch (Exception ex)
             {
@@ -42,6 +34,11 @@ namespace Connect_agenda_services.Services
         {
             try
             {
+                var havSchedule = await HaveAnyScheduleForProfissional(orderAdd.ProfissionalServiceId, orderAdd.StartDate, orderAdd.EndDate);
+                
+                if (havSchedule)
+                    throw new Exception("Já existe um agendamento para este profissional neste horário, por favor escolha outro horário.");
+                
                 OrderModel order = new OrderModel();
 
                 order.ProfissionalServiceId = orderAdd.ProfissionalServiceId;
@@ -66,6 +63,27 @@ namespace Connect_agenda_services.Services
                 await _orderRepository.Post(order);
 
                 return order;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        // Método para verificar se já existe um agendamento para o profissional no horário escolhido
+        // Adicoinar Regra para pegar a configuração de horário do profissional
+        public async Task<bool> HaveAnyScheduleForProfissional(string profissinalId, DateTime startDate, DateTime? endDate)
+        {
+            try
+            {
+                OrderFilterModel filter = new OrderFilterModel();
+                filter.ProfissionalServiceId = profissinalId;
+                filter.StartDate = startDate;
+                filter.EndDate = endDate ?? DateTime.Now;
+
+                var orders = await _orderRepository.GetOrderByFilter(filter);
+
+                return orders.Count > 0;
             }
             catch (Exception ex)
             {

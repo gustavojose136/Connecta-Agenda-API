@@ -13,5 +13,6 @@ namespace Connect_agenda_data.repository.interfaces
         public Task<List<OrderModel>> GetAllOrders(string? CompanyId);
         public Task<List<OrderModel>> GetOrderByFilter(OrderFilterModel filter);
         public Task<OrderModel> Post(OrderModel order);
+        public Task<OrderModel> Update(OrderModel order);
     }
 }
