@@ -13,6 +13,7 @@ namespace Connect_agenda_data.repository.interfaces
     {
         Task<UserModel> Login(string userEmail, string password);
         Task<UserExitModel> GetAll(UserFilterModel? filter, int pageNumber, int pageItems);
+        Task<UserModel> GetUserById(string id);
         Task<UserModel> Post(UserModel model);
         Task<UserModel> Update(UserModel model);
         Task<UserModel> Inactive(string id);

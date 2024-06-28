@@ -43,49 +43,87 @@ namespace Connect_agenda_data.repository
                 var query = _dBContext.Order.AsQueryable();
 
                 if (!string.IsNullOrEmpty(filter.Id))
+                {
                     query = query.Where(x => x.Id == filter.Id);
+                    Console.WriteLine("Filter applied: Id");
+                }
 
                 if (!string.IsNullOrEmpty(filter.ProfissionalServiceId))
+                {
                     query = query.Where(x => x.ProfissionalServiceId == filter.ProfissionalServiceId);
+                    Console.WriteLine("Filter applied: ProfissionalServiceId");
+                }
 
                 if (!string.IsNullOrEmpty(filter.ClientId))
+                {
                     query = query.Where(x => x.ClientId == filter.ClientId);
+                    Console.WriteLine("Filter applied: ClientId");
+                }
 
                 if (filter.Status != null)
+                {
                     query = query.Where(x => x.Status == filter.Status);
+                    Console.WriteLine("Filter applied: Status");
+                }
 
-                if (!string.IsNullOrEmpty(filter.CompanyId))
-                    query = query.Where(x => x.CompanyId == filter.CompanyId);
+                // if (!string.IsNullOrEmpty(filter.CompanyId))
+                // {
+                //     query = query.Where(x => x.CompanyId == filter.CompanyId);
+                //     Console.WriteLine("Filter applied: CompanyId");
+                // }
 
                 if (filter.StartDate != null)
+                {
                     query = query.Where(x => x.StartDate >= filter.StartDate);
+                    Console.WriteLine("Filter applied: StartDate");
+                }
 
                 if (filter.EndDate != null)
+                {
                     query = query.Where(x => x.EndDate <= filter.EndDate);
+                    Console.WriteLine("Filter applied: EndDate");
+                }
 
-                if (filter.paymentMethod != null)
-                    query = query.Where(x => x.paymentMethod == filter.paymentMethod);
+                //if (filter.paymentMethod != null)
+                //{
+                //    query = query.Where(x => x.paymentMethod == filter.paymentMethod);
+                //    Console.WriteLine("Filter applied: paymentMethod");
+                //}
 
                 if (!string.IsNullOrEmpty(filter.PlanCardId))
+                {
                     query = query.Where(x => x.PlanCardId == filter.PlanCardId);
+                    Console.WriteLine("Filter applied: PlanCardId");
+                }
 
-                if (filter.IsPaid != null)
-                    query = query.Where(x => x.IsPaid == filter.IsPaid);
+                //if (filter.IsPaid != null)
+                //{
+                //    query = query.Where(x => x.IsPaid == filter.IsPaid);
+                //    Console.WriteLine("Filter applied: IsPaid");
+                //}
 
                 if (filter.IsPlanCoop)
+                {
                     query = query.Where(x => x.IsPlanCoop == filter.IsPlanCoop);
+                    Console.WriteLine("Filter applied: IsPlanCoop");
+                }
 
                 query = query
+                    .Include(x => x.Client)
                     .Include(x => x.ProfissionalService)
                     .ThenInclude(x => x.Profissional);
 
-                return await query.ToListAsync();
+                var result = await query.ToListAsync();
+                Console.WriteLine($"Number of records found: {result.Count}");
+
+                return result;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
+
 
         public async Task<OrderModel> Post(OrderModel order)
         {

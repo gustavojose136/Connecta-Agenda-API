@@ -11,11 +11,11 @@ namespace Connect_agenda_models.Models
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public string ProfissionalServiceId { get; set; } = string.Empty;
-        public ProfissionalServiceModel ProfissionalService { get; set; } = new ProfissionalServiceModel();
+        public ProfissionalServiceModel? ProfissionalService { get; set; }
         public string ClientId { get; set; } = string.Empty;
-        public UserModel Client { get; set; } = new UserModel();
+        public UserModel? Client { get; set; }
         public string CompanyId { get; set; } = string.Empty;
-        public CompanyModel Company { get; set; } = new CompanyModel();
+        public CompanyModel? Company { get; set; } 
         public string Observation { get; set; } = string.Empty;
         public OrderStatusEnumModel Status { get; set; }
         public DateTime StartDate { get; set; }
@@ -29,10 +29,10 @@ namespace Connect_agenda_models.Models
         public bool IsPlanCoop { get;set; }
         public double? PricePlanCoop { get; set; }
         public string UserUpdateId { get; set; } = string.Empty;
-        public UserModel UserUpdate { get; set; } = new UserModel();
+        public UserModel? UserUpdate { get; set; }
         public DateTime UpdateDate { get; set; }
         public string UserCreateId { get; set; } = string.Empty;
-        public UserModel UserCreate { get; set; } = new UserModel();
+        public UserModel? UserCreate { get; set; } 
         public DateTime CreateDate { get; set; }
     }
 }
