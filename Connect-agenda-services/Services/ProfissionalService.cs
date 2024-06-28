@@ -4,6 +4,7 @@ using Connect_agenda_models.Models.AddModels;
 using Connect_agenda_services.Services.Encryption;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -26,6 +27,19 @@ namespace Connect_agenda_services.Services
             _userCompanyRepository = userCompanyRepository;
             _profissinalServiceRepository = profissinalServiceRepository;
             _roleUserCompanyRepository = roleUserCompanyRepository;
+        }
+
+        public async Task<List<ProfissionalServiceModel>> GetAllProfissionalService()
+        {
+            try
+            {
+
+                return await _profissinalServiceRepository.GetAll();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public async Task<string> CreateProfissional(ProfissinalAddModel profissinalAdd, string createUserId, string companyId)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj": {}
+    "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj": {
+    "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
+        "projectUniqueName": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
         "projectName": "Connect-agenda-api",
-        "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
+        "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-api\\Connect-agenda-api.csproj",
         "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-api\\obj\\",
+        "outputPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,14 +29,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
-                "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj"
+              "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
+                "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj"
               },
-              "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
-                "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
+              "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+                "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
               },
-              "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {
-                "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj"
+              "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {
+                "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj"
               }
             }
           }
@@ -118,14 +118,14 @@
         }
       }
     },
-    "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
+    "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
+        "projectUniqueName": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
         "projectName": "Connect-agenda-data",
-        "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
+        "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj",
         "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\obj\\",
+        "outputPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,8 +143,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
-                "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
+              "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+                "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
               }
             }
           }
@@ -217,14 +217,14 @@
         }
       }
     },
-    "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+    "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "projectUniqueName": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
         "projectName": "Connect-agenda-models",
-        "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
+        "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj",
         "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\obj\\",
+        "outputPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -278,14 +278,14 @@
         }
       }
     },
-    "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {
+    "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj",
+        "projectUniqueName": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj",
         "projectName": "Connect-agenda-services",
-        "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj",
+        "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-services\\Connect-agenda-services.csproj",
         "packagesPath": "C:\\Users\\gjose\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-services\\obj\\",
+        "outputPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gjose\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -303,11 +303,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
-                "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj"
+              "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj": {
+                "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-data\\Connect-agenda-data.csproj"
               },
-              "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
-                "projectPath": "D:\\Projetos\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
+              "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj": {
+                "projectPath": "D:\\Projetos\\Facul\\Connecta-Agenda-API\\Connect-agenda-models\\Connect-agenda-models.csproj"
               }
             }
           }
@@ -328,6 +328,10 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
               "target": "Package",
               "version": "[8.0.0, )"
             },

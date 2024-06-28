@@ -84,6 +84,20 @@ namespace Connect_agenda_data.repository
             }
         }
 
+        public async Task<UserModel> GetUserById(string userId)
+        {
+            try
+            {
+                var user = await _dBContext.User.Where(x => x.Id == userId).FirstAsync();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
         public async Task<UserModel> Post(UserModel user)
         {
             try

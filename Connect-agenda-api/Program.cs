@@ -3,6 +3,7 @@ using Connect_agenda_data.data;
 using Connect_agenda_data.repository;
 using Connect_agenda_data.repository.interfaces;
 using Connect_agenda_services.Services;
+using Connect_agenda_services.Services.Jobs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -95,6 +96,9 @@ builder.Services.AddScoped<CompanyService>();
 builder.Services.AddScoped<ProfissionalService>();
 builder.Services.AddScoped<ClientService>();
 builder.Services.AddScoped<ScheduleService>();
+builder.Services.AddScoped<SendEmailService>();
+
+builder.Services.AddHostedService<VerifyScheduleJobService>();
 
 
 var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection("SecurityKey").Value);

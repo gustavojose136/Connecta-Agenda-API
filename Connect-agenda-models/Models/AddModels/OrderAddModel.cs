@@ -18,7 +18,7 @@ namespace Connect_agenda_models.Models.AddModels
         public PaymentMethodEnum paymentMethod { get; set; }
         public string? PlanCardId { get; set; }
         public double Price { get; set; }
-        public double Discont { get; set; }
+        public double? Discont { get; set; }
         public bool IsPaid { get; set; }
         public bool IsPlanCoop { get; set; }
         public double? PricePlanCoop { get; set; }

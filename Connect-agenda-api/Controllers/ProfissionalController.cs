@@ -9,7 +9,7 @@ using System.Security.Claims;
 namespace Connect_agenda_api.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     [ApiController]
     public class ProfissionalController : ControllerBase
     {
@@ -18,6 +18,22 @@ namespace Connect_agenda_api.Controllers
         public ProfissionalController(ProfissionalService profissionalService)
         {
             _profissionalService = profissionalService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllProfissionalServices()
+        {
+            try
+            {
+                var userId = User.FindFirstValue(ClaimTypes.Name);
+                var companyId = User.FindFirstValue(ClaimTypes.Surname);
+
+                return Ok(await _profissionalService.GetAllProfissionalService());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         [HttpPost]
