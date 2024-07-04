@@ -10,7 +10,7 @@ using Connect_agenda_models.Models.FilterModels;
 namespace Connect_agenda_api.Controllers
 {
     [Route("api/[controller]")]
-    // [Authorize]
+    [Authorize]
     [ApiController]
     public class ScheduleController : ControllerBase
     {
@@ -26,8 +26,8 @@ namespace Connect_agenda_api.Controllers
         {
             try
             {
-                // var companyId = User.FindFirstValue(ClaimTypes.Surname);
-                var companyId = "EMPRESATESTE";
+                var companyId = User.FindFirstValue(ClaimTypes.Surname);
+                //var companyId = "EMPRESATESTE";
 
                 return Ok(await _scheduleService.getAll(filter, companyId));
             }
@@ -42,11 +42,11 @@ namespace Connect_agenda_api.Controllers
         {
             try
             {
-                // var userId = User.FindFirstValue(ClaimTypes.Name);
-                // var companyId = User.FindFirstValue(ClaimTypes.Surname);
+                var userId = User.FindFirstValue(ClaimTypes.Name);
+                var companyId = User.FindFirstValue(ClaimTypes.Surname);
 
-                var userId = "eaafdb55-ad79-4dfe-88cf-0b3739158753";
-                var companyId = "EMPRESATESTE";
+                //var userId = "eaafdb55-ad79-4dfe-88cf-0b3739158753";
+                //var companyId = "EMPRESATESTE";
 
                 return Ok(await _scheduleService.CreateSchedule(orderAdd, companyId, userId));
             }

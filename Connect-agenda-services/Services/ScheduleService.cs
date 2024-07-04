@@ -217,7 +217,6 @@ namespace Connect_agenda_services.Services
                         ";
 
 
-                // Exemplo de envio fictício:
                 await _sendEmailService.PostEmail(email);
             }
             catch (Exception ex)
